@@ -17,5 +17,5 @@
 
     - name: Copy index.html to Apache document root
       copy:
-        src: "{{ ansible_env.HOME }}/demo_project12/index.html"
+        src: "{{ ansible_workspace }}/index.html"
         dest: /var/www/html/index.html
