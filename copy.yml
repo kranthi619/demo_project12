@@ -14,3 +14,8 @@
 
     - name: Add firewall rule for HTTP
       shell: iptables -A INPUT -p tcp --dport 80 -j ACCEPT
+
+    - name: Copy index.html to Apache document root
+      copy:
+        src: "{{ ansible_env.HOME }}/demo_project12/index.html"
+        dest: /var/www/html/index.html
