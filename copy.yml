@@ -17,5 +17,7 @@
 
     - name: Copy index.html to Apache document root
       copy:
-        src: "{{ ansible_workspace }}/index.html"
-        dest: /var/www/html/index.html
+        src: "/var/lib/jenkins/workspace/ansible/index.html"
+        dest: "/var/www/html/index.html"
+        remote_src: yes
+
